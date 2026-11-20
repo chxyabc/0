@@ -19,4 +19,3 @@ jobs:
           target_branch: main
           upstream_branch: main
           github_token: ${{ secrets.GITHUB_TOKEN }}
-s
