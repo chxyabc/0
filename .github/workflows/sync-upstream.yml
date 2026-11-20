@@ -8,6 +8,10 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout fork
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Sync upstream
         uses: aormsby/Fork-Sync-With-Upstream-action@v2.2
         with:
@@ -15,3 +19,4 @@ jobs:
           target_branch: main
           upstream_branch: main
           github_token: ${{ secrets.GITHUB_TOKEN }}
+s
